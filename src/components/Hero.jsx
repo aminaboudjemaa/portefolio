@@ -173,7 +173,7 @@ const Hero = () => {
         >
           Créatrice d'histoires visuelles à partir de données complexes, 
           <span className="text-amber-600 font-semibold"> transformant les chiffres en récits captivants</span> 
-          pour l'avenir numérique
+           <br />pour l'avenir numérique
         </motion.p>
 
         <motion.div

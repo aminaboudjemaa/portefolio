@@ -39,14 +39,14 @@ const Contact = () => {
     {
       icon: Mail,
       title: "Email",
-      value: "contact@dataanalyst.com",
-      link: "mailto:contact@dataanalyst.com"
+      value: "amina.boudjemaa.etu@gmail.com",
+      link: "mailto:amina.boudjemaa.etu@gmail.com"
     },
     {
       icon: Phone,
       title: "Téléphone",
-      value: "+33 6 12 34 56 78",
-      link: "tel:+33612345678"
+      value: "+33 6 59 95 92 08",
+      link: "tel:+33659959208"
     },
     {
       icon: MapPin,
@@ -57,9 +57,8 @@ const Contact = () => {
   ]
 
   const socialLinks = [
-    { icon: Github, href: "#", label: "GitHub" },
-    { icon: Linkedin, href: "#", label: "LinkedIn" },
-    { icon: Twitter, href: "#", label: "Twitter" }
+    { icon: Github, href: "https://github.com/aminaboudjemaa", label: "GitHub" },
+    { icon: Linkedin, href: "https://www.linkedin.com/in/amina-boudjem%C3%A2a-b4a688138/", label: "LinkedIn" },
   ]
 
   const handleSubmit = (e) => {
