@@ -32,29 +32,13 @@ const Experience = () => {
 
   const experiences = [
     {
-      company: "Thales",
-      role: "Développeuse Data & IA",
-      period: "Stage récent",
-      icon: Brain,
-      color: "from-blue-400 to-cyan-500",
-      bgColor: "from-blue-50 to-cyan-50",
-      borderColor: "border-blue-200",
-      achievements: [
-        "Développement d'une application d'acquisition et traitement automatique de données avec LLM",
-        "Conception et développement d'une interface utilisateur interactive",
-        "Déploiement sur infrastructure cloud avec optimisation des performances",
-        "Intégration de modèles de machine learning pour l'analyse prédictive"
-      ],
-      technologies: ["Python", "LLM", "Cloud", "Machine Learning", "UI/UX"]
-    },
-    {
       company: "Outscale",
       role: "Analyste de données & Monitoring",
       period: "Stage précédent",
       icon: BarChart3,
-      color: "from-emerald-400 to-teal-500",
-      bgColor: "from-emerald-50 to-teal-50",
-      borderColor: "border-emerald-200",
+      color: "from-amber-400 to-rose-500",
+      bgColor: "from-amber-50 to-rose-50",
+      borderColor: "border-amber-200",
       achievements: [
         "Analyse approfondie des logs système et création de dashboards Grafana",
         "Mise en place du monitoring avec Prometheus et Node Exporter",
@@ -62,11 +46,27 @@ const Experience = () => {
         "Optimisation des requêtes PromQL pour un monitoring efficace"
       ],
       technologies: ["Grafana", "Prometheus", "PromQL", "Cloud", "Monitoring"]
+    },
+    {
+      company: "Thales",
+      role: "Développeuse Data & IA",
+      period: "Stage récent",
+      icon: Brain,
+      color: "from-rose-400 to-amber-500",
+      bgColor: "from-rose-50 to-amber-50",
+      borderColor: "border-rose-200",
+      achievements: [
+        "Développement d'une application d'acquisition et traitement automatique de données avec LLM",
+        "Conception et développement d'une interface utilisateur interactive",
+        "Déploiement sur infrastructure cloud avec optimisation des performances",
+        "Intégration de modèles de machine learning pour l'analyse prédictive"
+      ],
+      technologies: ["Python", "LLM", "Cloud", "Machine Learning", "UI/UX"]
     }
   ]
 
   return (
-    <section id="experience" className="py-20 bg-gradient-to-b from-blue-50 to-emerald-50">
+    <section id="experience" className="py-20 bg-gradient-to-b from-amber-50 to-rose-50">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           ref={ref}
@@ -80,7 +80,7 @@ const Experience = () => {
             className="text-4xl md:text-6xl font-bold mb-6"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
-            <span className="bg-gradient-to-r from-blue-500 to-emerald-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 to-rose-600 bg-clip-text text-transparent">
               Expériences
             </span>
           </motion.h2>
@@ -90,7 +90,7 @@ const Experience = () => {
             className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed"
           >
             Des stages enrichissants qui m'ont permis de développer mes compétences 
-            <span className="text-blue-600 font-semibold"> en data science et cloud computing</span>
+            <span className="text-amber-600 font-semibold"> en data science et cloud computing</span>
           </motion.p>
         </motion.div>
 

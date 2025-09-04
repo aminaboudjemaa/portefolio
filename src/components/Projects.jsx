@@ -54,10 +54,10 @@ const Projects = () => {
     },
     {
       title: "Infrastructure Cloud & Machines Virtuelles",
-      description: "Mise en place d'une infrastructure cloud complète avec création et gestion de machines virtuelles, optimisation des ressources et monitoring des performances.",
+      description: "Utilisation de Cockpit pour la création et gestion de machines virtuelles, configuration réseau, et mise en place d'une infrastructure cloud complète avec monitoring des performances.",
       image: "☁️",
-      technologies: ["Cloud Computing", "Machines Virtuelles", "RabbitMQ", "Monitoring"],
-      features: ["Infrastructure scalable", "Gestion des ressources", "Optimisation des coûts"],
+      technologies: ["Cockpit", "Machines Virtuelles", "Réseau", "Cloud Computing"],
+      features: ["Interface Cockpit", "Création de VMs", "Configuration réseau", "Monitoring"],
       gradient: "from-teal-500 to-emerald-600",
       icon: Cloud,
       company: "Outscale"

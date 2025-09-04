@@ -1,5 +1,7 @@
 import { motion } from 'framer-motion'
 import { ArrowDown, BarChart3, Database, TrendingUp, Sparkles } from 'lucide-react'
+import ProfileImage from './ProfileImage'
+import profileImage from '../assets/images/6ae08f7e-497a-4624-aa90-24a8e5bc0109.jpg'
 
 const Hero = () => {
   const containerVariants = {
@@ -91,9 +93,9 @@ const Hero = () => {
                 rotate: [0, -10, 10, 0],
                 transition: { duration: 0.6 }
               }}
-              className="p-4 bg-gradient-to-br from-teal-200 to-emerald-300 rounded-3xl shadow-lg floating"
+              className="p-4 bg-gradient-to-br from-amber-200 to-rose-200 rounded-3xl shadow-lg floating"
             >
-              <BarChart3 className="w-10 h-10 text-teal-700" />
+              <BarChart3 className="w-10 h-10 text-amber-700" />
             </motion.div>
             
             <motion.div
@@ -102,9 +104,9 @@ const Hero = () => {
                 rotate: [0, 10, -10, 0],
                 transition: { duration: 0.6 }
               }}
-              className="p-4 bg-gradient-to-br from-blue-200 to-cyan-300 rounded-3xl shadow-lg floating-reverse"
+              className="p-4 bg-gradient-to-br from-rose-200 to-amber-200 rounded-3xl shadow-lg floating-reverse"
             >
-              <Database className="w-10 h-10 text-blue-700" />
+              <Database className="w-10 h-10 text-rose-700" />
             </motion.div>
             
             <motion.div
@@ -113,9 +115,9 @@ const Hero = () => {
                 rotate: [0, -15, 15, 0],
                 transition: { duration: 0.6 }
               }}
-              className="p-4 bg-gradient-to-br from-emerald-200 to-teal-300 rounded-3xl shadow-lg wave"
+              className="p-4 bg-gradient-to-br from-amber-200 to-rose-200 rounded-3xl shadow-lg wave"
             >
-              <TrendingUp className="w-10 h-10 text-emerald-700" />
+              <TrendingUp className="w-10 h-10 text-amber-700" />
             </motion.div>
           </div>
           
@@ -125,21 +127,33 @@ const Hero = () => {
             transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
             className="absolute inset-0 flex items-center justify-center"
           >
-            <Sparkles className="w-6 h-6 text-teal-400 opacity-60" />
+            <Sparkles className="w-6 h-6 text-amber-400 opacity-60" />
           </motion.div>
+        </motion.div>
+
+        {/* Profile Image */}
+        <motion.div
+          variants={itemVariants}
+          className="mb-8 flex justify-center"
+        >
+          <ProfileImage 
+            src={profileImage} 
+            alt="Amina Boudjemaa" 
+            className="w-48 h-48 md:w-64 md:h-64"
+          />
         </motion.div>
 
         {/* Name with artistic styling */}
         <motion.h1
           variants={itemVariants}
-          className="text-7xl md:text-9xl font-bold mb-6"
+          className="text-6xl md:text-8xl font-bold mb-6"
           style={{ fontFamily: 'Playfair Display, serif' }}
         >
-          <span className="bg-gradient-to-r from-teal-500 via-emerald-500 to-blue-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-amber-600 via-rose-500 to-amber-700 bg-clip-text text-transparent">
             Amina
           </span>
           <br />
-          <span className="bg-gradient-to-r from-blue-500 via-teal-500 to-emerald-500 bg-clip-text text-transparent">
+          <span className="bg-gradient-to-r from-rose-600 via-amber-600 to-rose-700 bg-clip-text text-transparent">
             Boudjemaa
           </span>
         </motion.h1>
@@ -155,10 +169,10 @@ const Hero = () => {
 
         <motion.p
           variants={itemVariants}
-          className="text-xl md:text-2xl text-gray-500 mb-12 max-w-3xl mx-auto leading-relaxed"
+          className="text-xl md:text-2xl text-gray-600 mb-12 max-w-3xl mx-auto leading-relaxed"
         >
           Créatrice d'histoires visuelles à partir de données complexes, 
-          <span className="text-teal-600 font-semibold"> transformant les chiffres en récits captivants</span> 
+          <span className="text-amber-600 font-semibold"> transformant les chiffres en récits captivants</span> 
           pour l'avenir numérique
         </motion.p>
 
@@ -169,10 +183,10 @@ const Hero = () => {
           <motion.button
             whileHover={{ 
               scale: 1.08,
-              boxShadow: "0 20px 40px rgba(79, 209, 199, 0.3)"
+              boxShadow: "0 20px 40px rgba(212, 165, 116, 0.3)"
             }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-5 bg-gradient-to-r from-teal-400 to-emerald-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 pulse-glow"
+            className="px-10 py-5 bg-gradient-to-r from-amber-500 to-rose-500 text-white font-semibold rounded-full shadow-lg hover:shadow-xl transition-all duration-300 pulse-glow"
           >
             Découvrir mes créations
           </motion.button>
@@ -180,10 +194,10 @@ const Hero = () => {
           <motion.button
             whileHover={{ 
               scale: 1.08,
-              backgroundColor: "rgba(79, 209, 199, 0.1)"
+              backgroundColor: "rgba(212, 165, 116, 0.1)"
             }}
             whileTap={{ scale: 0.95 }}
-            className="px-10 py-5 border-2 border-teal-400 text-teal-600 font-semibold rounded-full hover:bg-teal-50 transition-all duration-300"
+            className="px-10 py-5 border-2 border-amber-400 text-amber-600 font-semibold rounded-full hover:bg-amber-50 transition-all duration-300"
           >
             Télécharger Portfolio
           </motion.button>

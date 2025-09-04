@@ -78,15 +78,9 @@ const About = () => {
               variants={itemVariants}
               className="p-8 glass rounded-3xl"
             >
-              <h3 className="text-2xl font-semibold text-gray-800 mb-4">De l'enseignement à la tech</h3>
-              <p className="text-gray-600 leading-relaxed mb-4">
-                Diplômée en mathématiques, j'ai d'abord enseigné cette discipline à des collégiens, 
-                développant ainsi ma pédagogie et ma capacité à rendre les concepts complexes accessibles.
-              </p>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-4">Mon parcours</h3>
               <p className="text-gray-600 leading-relaxed">
-                Aujourd'hui étudiante en Technologies de l'Information à l'Université Sorbonne Paris Nord, 
-                je mets à profit cette expérience pédagogique pour créer des visualisations de données 
-                claires et impactantes.
+                Mon parcours a commencé par les mathématiques, puis s'est ouvert aux Technologies de l'Information à l'Université Sorbonne Paris Nord. Aujourd'hui, je mets ma rigueur analytique au service de l'exploration et de la visualisation des données.
               </p>
             </motion.div>
 
@@ -96,9 +90,9 @@ const About = () => {
             >
               <h3 className="text-2xl font-semibold text-gray-800 mb-4">Ma vision</h3>
               <p className="text-gray-600 leading-relaxed">
-                Je crois que les données racontent des histoires fascinantes. Mon approche allie 
-                <span className="text-teal-600 font-semibold"> rigueur mathématique</span> et 
-                <span className="text-emerald-600 font-semibold"> créativité artistique</span> 
+                Transformer et analyser les données me passionne. Mon approche allie 
+                <span className="text-amber-600 font-semibold"> rigueur mathématique</span> et 
+                <span className="text-rose-600 font-semibold"> créativité artistique</span> 
                 pour transformer les chiffres en insights visuels et actionnables.
               </p>
             </motion.div>

@@ -76,7 +76,7 @@ const Contact = () => {
   }
 
   return (
-    <section id="contact" className="py-20 bg-gradient-to-b from-emerald-50 to-teal-50">
+    <section id="contact" className="py-20 bg-gradient-to-b from-amber-50 to-rose-50">
       <div className="max-w-7xl mx-auto px-6">
         <motion.div
           ref={ref}
@@ -90,7 +90,7 @@ const Contact = () => {
             className="text-4xl md:text-6xl font-bold mb-6"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
-            <span className="bg-gradient-to-r from-emerald-500 to-teal-600 bg-clip-text text-transparent">
+            <span className="bg-gradient-to-r from-amber-500 to-rose-600 bg-clip-text text-transparent">
               Contact
             </span>
           </motion.h2>
@@ -112,7 +112,7 @@ const Contact = () => {
             className="space-y-8"
           >
             <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-semibold text-white mb-6">Informations de contact</h3>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6">Informations de contact</h3>
               <div className="space-y-6">
                 {contactInfo.map((info, index) => (
                   <motion.a
@@ -120,18 +120,18 @@ const Contact = () => {
                     href={info.link}
                     variants={itemVariants}
                     whileHover={{ x: 10, scale: 1.02 }}
-                    className="flex items-center p-4 bg-white/5 backdrop-blur-sm rounded-xl border border-white/10 hover:bg-white/10 transition-all duration-300"
+                    className="flex items-center p-4 bg-white/80 backdrop-blur-sm rounded-xl border border-amber-200 hover:bg-white/90 transition-all duration-300 shadow-lg"
                   >
                     <motion.div
                       whileHover={{ rotate: 360 }}
                       transition={{ duration: 0.5 }}
-                      className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center mr-4"
+                      className="w-12 h-12 bg-gradient-to-r from-amber-500 to-rose-500 rounded-full flex items-center justify-center mr-4"
                     >
                       <info.icon className="w-6 h-6 text-white" />
                     </motion.div>
                     <div>
-                      <div className="text-white font-medium">{info.title}</div>
-                      <div className="text-gray-300">{info.value}</div>
+                      <div className="text-gray-800 font-medium">{info.title}</div>
+                      <div className="text-gray-600">{info.value}</div>
                     </div>
                   </motion.a>
                 ))}
@@ -139,7 +139,7 @@ const Contact = () => {
             </motion.div>
 
             <motion.div variants={itemVariants}>
-              <h3 className="text-2xl font-semibold text-white mb-6">Réseaux sociaux</h3>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6">Réseaux sociaux</h3>
               <div className="flex space-x-4">
                 {socialLinks.map((social, index) => (
                   <motion.a
@@ -148,7 +148,7 @@ const Contact = () => {
                     variants={itemVariants}
                     whileHover={{ scale: 1.1, y: -5 }}
                     whileTap={{ scale: 0.95 }}
-                    className="w-12 h-12 bg-gradient-to-r from-blue-500 to-purple-600 rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300"
+                    className="w-12 h-12 bg-gradient-to-r from-amber-500 to-rose-500 rounded-full flex items-center justify-center hover:shadow-lg hover:shadow-amber-500/25 transition-all duration-300"
                   >
                     <social.icon className="w-6 h-6 text-white" />
                   </motion.a>
@@ -165,45 +165,45 @@ const Contact = () => {
           >
             <motion.div
               variants={itemVariants}
-              className="p-8 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10"
+              className="p-8 bg-white/80 backdrop-blur-sm rounded-2xl border border-amber-200 shadow-lg"
             >
-              <h3 className="text-2xl font-semibold text-white mb-6">Envoyez-moi un message</h3>
+              <h3 className="text-2xl font-semibold text-gray-800 mb-6">Envoyez-moi un message</h3>
               
               <form onSubmit={handleSubmit} className="space-y-6">
                 <motion.div variants={itemVariants}>
-                  <label className="block text-white font-medium mb-2">Nom</label>
+                  <label className="block text-gray-800 font-medium mb-2">Nom</label>
                   <input
                     type="text"
                     name="name"
                     value={formData.name}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:bg-white/20 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/60 border border-amber-200 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-amber-500 focus:bg-white/80 transition-all duration-300"
                     placeholder="Votre nom"
                     required
                   />
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
-                  <label className="block text-white font-medium mb-2">Email</label>
+                  <label className="block text-gray-800 font-medium mb-2">Email</label>
                   <input
                     type="email"
                     name="email"
                     value={formData.email}
                     onChange={handleChange}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:bg-white/20 transition-all duration-300"
+                    className="w-full px-4 py-3 bg-white/60 border border-amber-200 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-amber-500 focus:bg-white/80 transition-all duration-300"
                     placeholder="votre@email.com"
                     required
                   />
                 </motion.div>
 
                 <motion.div variants={itemVariants}>
-                  <label className="block text-white font-medium mb-2">Message</label>
+                  <label className="block text-gray-800 font-medium mb-2">Message</label>
                   <textarea
                     name="message"
                     value={formData.message}
                     onChange={handleChange}
                     rows={5}
-                    className="w-full px-4 py-3 bg-white/10 border border-white/20 rounded-lg text-white placeholder-gray-400 focus:outline-none focus:border-purple-500 focus:bg-white/20 transition-all duration-300 resize-none"
+                    className="w-full px-4 py-3 bg-white/60 border border-amber-200 rounded-lg text-gray-800 placeholder-gray-500 focus:outline-none focus:border-amber-500 focus:bg-white/80 transition-all duration-300 resize-none"
                     placeholder="Décrivez votre projet..."
                     required
                   />
@@ -214,7 +214,7 @@ const Contact = () => {
                   whileHover={{ scale: 1.05 }}
                   whileTap={{ scale: 0.95 }}
                   type="submit"
-                  className="w-full px-6 py-4 bg-gradient-to-r from-blue-500 to-purple-600 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-purple-500/25 transition-all duration-300 flex items-center justify-center space-x-2"
+                  className="w-full px-6 py-4 bg-gradient-to-r from-amber-500 to-rose-500 text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-amber-500/25 transition-all duration-300 flex items-center justify-center space-x-2"
                 >
                   <Send className="w-5 h-5" />
                   <span>Envoyer le message</span>

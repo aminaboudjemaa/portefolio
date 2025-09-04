@@ -34,17 +34,20 @@ const Navigation = () => {
     >
       <div className="max-w-7xl mx-auto px-6 py-4">
         <div className="flex items-center justify-between">
-          <motion.div
+          <motion.a
+            href="https://github.com/amina-boudjemaa"
+            target="_blank"
+            rel="noopener noreferrer"
             whileHover={{ 
               scale: 1.05,
               rotate: [0, -2, 2, 0],
               transition: { duration: 0.3 }
             }}
-            className="text-2xl font-bold bg-gradient-to-r from-teal-500 to-emerald-600 bg-clip-text text-transparent"
+            className="text-2xl font-bold bg-gradient-to-r from-amber-600 to-rose-600 bg-clip-text text-transparent hover:from-amber-700 hover:to-rose-700 transition-all duration-300"
             style={{ fontFamily: 'Playfair Display, serif' }}
           >
             Amina Boudjemaa
-          </motion.div>
+          </motion.a>
           
           <div className="hidden md:flex space-x-8">
             {navItems.map((item, index) => (
@@ -57,13 +60,13 @@ const Navigation = () => {
                 whileHover={{ 
                   scale: 1.1,
                   y: -2,
-                  color: "#0d9488"
+                  color: "#d97706"
                 }}
-                className="text-gray-600 hover:text-teal-600 transition-colors duration-300 font-medium relative group"
+                className="text-gray-600 hover:text-amber-600 transition-colors duration-300 font-medium relative group"
               >
                 {item.name}
                 <motion.div
-                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-teal-400 to-emerald-500 group-hover:w-full transition-all duration-300"
+                  className="absolute -bottom-1 left-0 w-0 h-0.5 bg-gradient-to-r from-amber-400 to-rose-500 group-hover:w-full transition-all duration-300"
                   initial={{ width: 0 }}
                   whileHover={{ width: "100%" }}
                 />

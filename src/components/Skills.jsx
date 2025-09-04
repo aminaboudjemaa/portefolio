@@ -137,35 +137,40 @@ const Skills = () => {
                 <h3 className="text-2xl font-semibold text-gray-800">{category.title}</h3>
               </div>
 
-              <div className="space-y-4">
+              <div className="grid grid-cols-2 gap-3">
                 {category.skills.map((skill, skillIndex) => (
                   <motion.div
                     key={skill.name}
-                    initial={{ width: 0 }}
-                    animate={isInView ? { width: "100%" } : { width: 0 }}
+                    initial={{ opacity: 0, scale: 0.8 }}
+                    animate={isInView ? { opacity: 1, scale: 1 } : { opacity: 0, scale: 0.8 }}
                     transition={{ 
-                      duration: 1, 
+                      duration: 0.5, 
                       delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.5,
                       ease: "easeOut"
                     }}
-                    className="relative"
+                    whileHover={{ 
+                      scale: 1.05, 
+                      y: -2,
+                      transition: { duration: 0.2 }
+                    }}
+                    className={`p-3 rounded-xl bg-gradient-to-br ${skill.color} bg-opacity-10 border border-amber-200 text-center shadow-sm hover:shadow-md transition-all duration-300`}
                   >
-                    <div className="flex justify-between items-center mb-2">
-                      <span className="text-gray-800 font-medium">{skill.name}</span>
-                      <span className="text-gray-500 text-sm">{skill.level}%</span>
-                    </div>
-                    <div className="w-full bg-gray-200 rounded-full h-3">
-                      <motion.div
-                        initial={{ width: 0 }}
-                        animate={isInView ? { width: `${skill.level}%` } : { width: 0 }}
-                        transition={{ 
-                          duration: 1.5, 
-                          delay: categoryIndex * 0.2 + skillIndex * 0.1 + 0.7,
-                          ease: "easeOut"
-                        }}
-                        className={`h-3 rounded-full bg-gradient-to-r ${skill.color} shadow-sm`}
-                      />
-                    </div>
+                    <div className="text-gray-800 font-medium text-sm">{skill.name}</div>
+                    <motion.div
+                      className="mt-2 w-8 h-8 mx-auto rounded-full bg-gradient-to-r from-amber-400 to-rose-400 flex items-center justify-center"
+                      animate={{ 
+                        rotate: [0, 360],
+                        scale: [1, 1.1, 1]
+                      }}
+                      transition={{ 
+                        duration: 3, 
+                        repeat: Infinity,
+                        ease: "easeInOut",
+                        delay: skillIndex * 0.2
+                      }}
+                    >
+                      <div className="w-3 h-3 bg-white rounded-full"></div>
+                    </motion.div>
                   </motion.div>
                 ))}
               </div>
